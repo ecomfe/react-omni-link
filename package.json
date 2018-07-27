@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/ecomfe/react-omni-link#readme",
   "files": [
-    "dist"
+    "cjs",
+    "es"
   ],
   "devDependencies": {
     "@ecomfe/eslint-config": "^1.0.0",
