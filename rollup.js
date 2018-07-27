@@ -4,7 +4,7 @@ const autoExternal = require('rollup-plugin-auto-external');
 const resolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
 const babel = require('rollup-plugin-babel');
-const eslint = require('rollup-plugin-eslint');
+const {eslint} = require('rollup-plugin-eslint');
 const {terser} = require('rollup-plugin-terser');
 
 const inputOptions = {
