@@ -9,6 +9,9 @@ const {terser} = require('rollup-plugin-terser');
 
 const inputOptions = {
     input: 'src/index.js',
+    external(id) {
+        return id in packageInfo.peerDependencies
+    },
     plugins: [
         resolve({main: true, module: true}),
         commonjs({include: 'node_modules/**'}),

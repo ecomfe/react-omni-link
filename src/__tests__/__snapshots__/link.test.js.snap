@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ExternalLink> 1`] = `
+<a
+  href="http://www.facebook.com"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  Facebook
+</a>
+`;
+
+exports[`<HyperLink> 1`] = `
+<a
+  href="http://www.facebook.com"
+>
+  Facebook
+</a>
+`;
+
+exports[`createLink 1`] = `
+<div>
+  <a
+    href="/users"
+    onClick={[Function]}
+  >
+    Home
+  </a>
+</div>
+`;
+
+exports[`createLink with template 1`] = `
+<div>
+  <a
+    href="/users/1"
+    onClick={[Function]}
+  >
+    Home
+  </a>
+</div>
+`;
+
+exports[`passing activeClassName prop to <Link> 1`] = `
+<div>
+  <a
+    aria-current="page"
+    className="active"
+    href="/"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    Home
+  </a>
+</div>
+`;
+
+exports[`passing external prop to <Link> 1`] = `
+<a
+  href="http://www.facebook.com"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  Facebook
+</a>
+`;
+
+exports[`passing refresh prop to <Link> 1`] = `
+<a
+  href="http://www.facebook.com"
+>
+  Facebook
+</a>
+`;
+
+exports[`react-router using <Link> 1`] = `
+<div>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    Home
+  </a>
+</div>
+`;
