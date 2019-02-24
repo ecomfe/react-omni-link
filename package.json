@@ -1,62 +1,66 @@
 {
-  "name": "react-omni-link",
-  "version": "1.0.2",
-  "description": "A unversal link component for react and react-router",
-  "main": "cjs/index.js",
-  "module": "es/index.js",
-  "sideEffects": false,
-  "scripts": {
-    "lint": "eslint src *.js",
-    "build": "node rollup.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ecomfe/react-omni-link.git"
-  },
-  "keywords": [
-    "react",
-    "react-router",
-    "link",
-    "template"
-  ],
-  "author": "otakustay",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ecomfe/react-omni-link/issues"
-  },
-  "homepage": "https://github.com/ecomfe/react-omni-link#readme",
-  "files": [
-    "dist"
-  ],
-  "devDependencies": {
-    "@ecomfe/eslint-config": "^1.0.0",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.6",
-    "babel-plugin-add-react-displayname": "0.0.5",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-plugin-react-require": "^3.0.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-1": "^6.24.1",
-    "eslint": "^5.2.0",
-    "eslint-plugin-babel": "^5.1.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-react": "^7.10.0",
-    "lodash.omit": "^4.5.0",
-    "prop-types": "^15.6.2",
-    "react-router-dom": "^4.3.1",
-    "rollup": "^0.63.4",
-    "rollup-plugin-auto-external": "^1.2.0",
-    "rollup-plugin-babel": "^3.0.7",
-    "rollup-plugin-commonjs": "^9.1.3",
-    "rollup-plugin-eslint": "^5.0.0",
-    "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-terser": "^1.0.1",
-    "uri-templates": "^0.2.0"
-  },
-  "peerDependencies": {
-    "react": ">=16",
-    "prop-types": ">=15",
-    "react-router-dom": ">=4"
-  }
+    "name": "react-omni-link",
+    "version": "1.0.2",
+    "description": "A unversal link component for react and react-router",
+    "main": "cjs/index.js",
+    "module": "es/index.js",
+    "sideEffects": false,
+    "scripts": {
+        "lint": "tslint -p .",
+        "build": "npm run lint && rollup -c"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ecomfe/react-omni-link.git"
+    },
+    "keywords": [
+        "react",
+        "react-router",
+        "link",
+        "template"
+    ],
+    "author": "otakustay",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ecomfe/react-omni-link/issues"
+    },
+    "homepage": "https://github.com/ecomfe/react-omni-link#readme",
+    "files": [
+        "dist"
+    ],
+    "devDependencies": {
+        "@types/lodash.omit": "^4.5.5",
+        "@types/prop-types": "^15.5.9",
+        "@types/react": "^16.8.4",
+        "@types/react-router-dom": "^4.3.1",
+        "@types/uri-templates": "^0.1.30",
+        "babel-core": "^6.26.3",
+        "babel-plugin-add-react-displayname": "0.0.5",
+        "babel-plugin-external-helpers": "^6.22.0",
+        "babel-plugin-react-require": "^3.0.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-1": "^6.24.1",
+        "lodash.omit": "^4.5.0",
+        "prop-types": "^15.7.2",
+        "react-router-dom": "^4.3.1",
+        "rollup": "^0.63.4",
+        "rollup-plugin-auto-external": "^1.2.0",
+        "rollup-plugin-babel": "^3.0.7",
+        "rollup-plugin-commonjs": "^9.1.3",
+        "rollup-plugin-json": "^3.1.0",
+        "rollup-plugin-node-resolve": "^3.3.0",
+        "rollup-plugin-sourcemaps": "^0.4.2",
+        "rollup-plugin-terser": "^1.0.1",
+        "rollup-plugin-typescript2": "^0.19.2",
+        "tslint": "^5.13.0",
+        "tslint-config-airbnb": "^5.11.1",
+        "typescript": "^3.3.3333",
+        "uri-templates": "^0.2.0"
+    },
+    "peerDependencies": {
+        "react": ">=16",
+        "prop-types": ">=15",
+        "react-router-dom": ">=4"
+    }
 }
