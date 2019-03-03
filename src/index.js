@@ -23,13 +23,13 @@ Link.propTypes = {
     to: PropTypes.string.isRequired,
     refresh: PropTypes.bool,
     external: PropTypes.bool,
-    activeClassName: PropTypes.string
+    activeClassName: PropTypes.string,
 };
 
 Link.defaultProps = {
     refresh: false,
     external: false,
-    activeClassName: ''
+    activeClassName: '',
 };
 
 export const ExternalLink = props => <Link external {...props} />;
