@@ -7,6 +7,7 @@
   "sideEffects": false,
   "scripts": {
     "lint": "skr lint",
+    "test": "skr test --target=react --coverage",
     "build": "skr rollup --clean"
   },
   "repository": {
@@ -32,9 +33,11 @@
   "devDependencies": {
     "lodash.omit": "^4.5.0",
     "prop-types": "^15.6.2",
-    "react": "^16.8.3",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "react-router-dom": "^4.3.1",
-    "reskript": "^0.8.0",
+    "react-test-renderer": "^16.8.4",
+    "reskript": "^0.10.2",
     "uri-templates": "^0.2.0"
   },
   "peerDependencies": {

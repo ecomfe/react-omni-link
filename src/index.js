@@ -1,4 +1,4 @@
-import uriTemplates from 'uri-templates';
+import URITemplates from 'uri-templates';
 import omit from 'lodash.omit';
 import PropTypes from 'prop-types';
 import {Link as RouterLink, NavLink as RouterNavLink} from 'react-router-dom';
@@ -37,7 +37,7 @@ export const ExternalLink = props => <Link external {...props} />;
 export const HyperLink = props => <Link refresh {...props} />;
 
 export const createLink = (urlTemplate, defaults = {}) => {
-    const template = typeof urlTemplate === 'string' ? uriTemplates(urlTemplate) : urlTemplate;
+    const template = typeof urlTemplate === 'string' ? URITemplates(urlTemplate) : urlTemplate;
 
     if (!template.varNames.length) {
         const to = template.toString();
