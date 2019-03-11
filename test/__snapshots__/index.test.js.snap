@@ -40,6 +40,13 @@ exports[`should create a link by string 1`] = `
 />
 `;
 
+exports[`should create a link by string with encoded params 1`] = `
+<a
+  href="/users/admin%2F"
+  onClick={[Function]}
+/>
+`;
+
 exports[`should create a link by string with params 1`] = `
 <a
   href="/users/admin"

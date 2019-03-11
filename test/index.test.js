@@ -38,6 +38,17 @@ test('should create a link by string with params', () => {
     expect(component.toJSON()).toMatchSnapshot();
 });
 
+test('should create a link by string with encoded params', () => {
+    const UserProfileLink = createLink('/users/{username}');
+    const component = create(
+        <Router>
+            <UserProfileLink username="admin/" />
+        </Router>
+    );
+
+    expect(component.toJSON()).toMatchSnapshot();
+});
+
 test('should create a external link by string', () => {
     const AdminConsoleLink = createLink('/console', {external: true});
 
