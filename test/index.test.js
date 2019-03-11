@@ -62,7 +62,7 @@ test('should create a link by string without encoding', () => {
 });
 
 test('should create a link by string with query', () => {
-    const DocumentEditLink = createLink('/documents/{+path}/edit{?params*}');
+    const DocumentEditLink = createLink('/documents/{+path}/edit{?query*}');
     const query = {a: '1', b: ['2', '3']};
     const component = create(
         <Router>
