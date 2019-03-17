@@ -37,7 +37,7 @@ export const ExternalLink = props => <Link external {...props} />;
 export const HyperLink = props => <Link refresh {...props} />;
 
 export const createLink = (urlTemplate, defaults = {}) => {
-    const template = typeof urlTemplate === 'string' ? URITemplates(urlTemplate) : urlTemplate;
+    const template = typeof urlTemplate === 'string' ? new URITemplates(urlTemplate) : urlTemplate;
 
     if (!template.varNames.length) {
         const to = template.toString();
