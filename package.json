@@ -7,7 +7,10 @@
   "sideEffects": false,
   "scripts": {
     "lint": "skr lint",
-    "test": "skr test --target=react --coverage",
+    "test": "NODE_ENV=test skr test --target=react --coverage",
+    "report-cov": "cat coverage/lcov.info | coveralls",
+    "ci": "yarn test && yarn run build",
+    "prepublishOnly": "yarn run ci",
     "build": "skr rollup --clean"
   },
   "repository": {
@@ -31,6 +34,7 @@
     "es"
   ],
   "devDependencies": {
+    "coveralls": "^3.0.3",
     "lodash.omit": "^4.5.0",
     "prop-types": "^15.6.2",
     "react": "^16.8.4",
