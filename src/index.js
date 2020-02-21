@@ -3,12 +3,14 @@ import omit from 'lodash.omit';
 import PropTypes from 'prop-types';
 import {Link as RouterLink, NavLink as RouterNavLink} from 'react-router-dom';
 
+const isSpecialProtocol = url => /^(?!https?:)\w+:\/\//.test(url);
+
 export const Link = ({refresh, external, to, activeClassName, ...props}) => {
     if (external) {
-        return <a href={to} target="_blank" rel="noopener noreferrer" {...props} />;
+        return <a href={to} target="_blank" rel="noopener" {...props} />;
     }
 
-    if (refresh) {
+    if (refresh || isSpecialProtocol(to)) {
         return <a href={to} {...props} />;
     }
 
