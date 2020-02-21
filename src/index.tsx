@@ -4,13 +4,13 @@ import omit from 'lodash.omit';
 import PropTypes from 'prop-types';
 import {Link as RouterLink, NavLink as RouterNavLink, NavLinkProps as RouterNavLinkProps} from 'react-router-dom';
 
-export const Link: FC<LinkProps> = ({refresh, external, to, activeClassName, ...props}) => {
+export const Link: FC<LinkProps> = ({refresh, external, to, activeClassName, innerRef, ...props}) => {
     if (external) {
-        return <a href={to} target="_blank" rel="noopener noreferrer" {...props} />;
+        return <a ref={innerRef} href={to} target="_blank" rel="noopener noreferrer" {...props} />;
     }
 
     if (refresh) {
-        return <a href={to} {...props} />;
+        return <a ref={innerRef} href={to} {...props} />;
     }
 
     if (activeClassName) {
