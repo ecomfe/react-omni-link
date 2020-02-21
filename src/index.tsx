@@ -44,7 +44,9 @@ export const ExternalLink: FC<Omit<LinkProps, 'external'>> = props => <Link exte
 
 export const HyperLink: FC<Omit<LinkProps, 'refresh'>> = props => <Link refresh {...props} />;
 
-export const createLink = (urlTemplate: URITemplate | string, defaults: Omit<LinkProps, 'to'> = {}) => {
+type URIArgs = {[key: string]: string | {[key: string]: string}};
+
+export function createLink<T extends URIArgs = any>(urlTemplate: URITemplate | string, defaults: Partial<T> = {}) {
     const template = typeof urlTemplate === 'string' ? uriTemplates(urlTemplate) : urlTemplate;
 
     if (!template.varNames.length) {
@@ -53,8 +55,7 @@ export const createLink = (urlTemplate: URITemplate | string, defaults: Omit<Lin
         return FixedLink;
     }
 
-
-    const TemplateLink: FC<any> = props => {
+    const TemplateLink: FC<T> = props => {
         const to = template.fill(props);
         const passDownProps = omit(props, template.varNames);
         return <Link to={to} {...defaults} {...passDownProps} />;
