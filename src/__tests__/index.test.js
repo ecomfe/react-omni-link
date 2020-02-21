@@ -1,7 +1,7 @@
 import {MemoryRouter as Router} from 'react-router';
 import URITemplate from 'uri-templates';
-import {createLink, ExternalLink, HyperLink, Link} from '../src';
 import {create} from 'react-test-renderer';
+import {createLink, ExternalLink, HyperLink, Link} from '../index';
 
 test('should create a link by URITemplate', () => {
     const template = new URITemplate('/users/{username}');

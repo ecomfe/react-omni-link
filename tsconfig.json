@@ -1,7 +1,16 @@
 {
     "extends": "./node_modules/reskript/config/tsconfig.json",
     "compilerOptions": {
-        "declaration": true,
-        "jsx": "react"
+        "jsx": "react",
+        "allowJs": false,
+        "target": "ES2015",
+        "module": "CommonJS",
+        "strict": true,
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "rootDir": "./src",
+        "outDir": "./cjs",
+        "noEmit": false,
+        "declaration": true
     }
 }

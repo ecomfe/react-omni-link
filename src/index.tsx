@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, {FC} from 'react';
 import uriTemplates, {URITemplate} from 'uri-templates';
 import omit from 'lodash.omit';
@@ -44,21 +45,26 @@ export const ExternalLink: FC<Omit<LinkProps, 'external'>> = props => <Link exte
 
 export const HyperLink: FC<Omit<LinkProps, 'refresh'>> = props => <Link refresh {...props} />;
 
-type URIArgs = {[key: string]: string | {[key: string]: string}};
+interface URIArgs {
+    [key: string]: string | {[key: string]: string};
+}
 
-export function createLink<T extends URIArgs = any>(urlTemplate: URITemplate | string, defaults: Partial<T> = {}) {
+export function createLink<T extends URIArgs = any>(
+    urlTemplate: URITemplate | string,
+    defaults: Partial<T> = {}
+): FC<T & Omit<LinkProps, 'to'>> {
     const template = typeof urlTemplate === 'string' ? uriTemplates(urlTemplate) : urlTemplate;
 
     if (!template.varNames.length) {
         const to = template.toString();
-        const FixedLink: FC<Omit<LinkProps, 'to'>> = props => <Link to={to} {...defaults} {...props} />;
+        const FixedLink: FC<T & Omit<LinkProps, 'to'>> = props => <Link to={to} {...defaults} {...props} />;
         return FixedLink;
     }
 
-    const TemplateLink: FC<T> = props => {
+    const TemplateLink: FC<T & Omit<LinkProps, 'to'>> = props => {
         const to = template.fill(props);
         const passDownProps = omit(props, template.varNames);
         return <Link to={to} {...defaults} {...passDownProps} />;
     };
     return TemplateLink;
-};
+}
