@@ -35,6 +35,11 @@
     "cjs",
     "es"
   ],
+  "dependencies": {
+    "lodash.omit": "^4.5.0",
+    "prop-types": "^15.6.2",
+    "uri-templates": "^0.2.0"
+  },
   "devDependencies": {
     "@types/lodash.omit": "^4.5.6",
     "@types/prop-types": "^15.7.3",
@@ -43,14 +48,11 @@
     "coveralls": "^3.0.3",
     "enzyme": "^3.11.0",
     "husky": "^4.2.3",
-    "lodash.omit": "^4.5.0",
-    "prop-types": "^15.6.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-router-dom": "^5.1.2",
     "react-test-renderer": "^16.8.4",
-    "reskript": "^0.25.10",
-    "uri-templates": "^0.2.0"
+    "reskript": "^0.25.10"
   },
   "peerDependencies": {
     "react": ">=16",
