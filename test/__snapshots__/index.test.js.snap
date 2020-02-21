@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create a actived nav link 1`] = `
+<a
+  aria-current="page"
+  className="active"
+  href="/users"
+  onClick={[Function]}
+  style={Object {}}
+/>
+`;
+
+exports[`should create a external link by shortcut 1`] = `
+<a
+  href="/users"
+  rel="noopener noreferrer"
+  target="_blank"
+/>
+`;
+
+exports[`should create a external link by string 1`] = `
+<a
+  href="/console"
+  rel="noopener noreferrer"
+  target="_blank"
+/>
+`;
+
+exports[`should create a link by URITemplate 1`] = `
+<a
+  href="/users/admin"
+  onClick={[Function]}
+/>
+`;
+
+exports[`should create a link by string 1`] = `
+<a
+  href="/users"
+  onClick={[Function]}
+/>
+`;
+
+exports[`should create a link by string with encoded params 1`] = `
+<a
+  href="/users/admin%2F"
+  onClick={[Function]}
+/>
+`;
+
+exports[`should create a link by string with params 1`] = `
+<a
+  href="/users/admin"
+  onClick={[Function]}
+/>
+`;
+
+exports[`should create a link by string with query 1`] = `
+<a
+  href="/documents/path/to/file/edit?a=1&b=2%2C3"
+  onClick={[Function]}
+/>
+`;
+
+exports[`should create a link by string without encoding 1`] = `
+<a
+  href="/documents/path/to/file?query=1"
+  onClick={[Function]}
+/>
+`;
+
+exports[`should create a refresh link by shortcut 1`] = `
+<a
+  href="/users"
+/>
+`;
