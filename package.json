@@ -1,6 +1,6 @@
 {
   "name": "react-omni-link",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A unversal link component for react and react-router",
   "main": "cjs/index.js",
   "module": "es/index.js",
