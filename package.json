@@ -52,7 +52,7 @@
     "react-dom": "^16.8.4",
     "react-router-dom": "^5.1.2",
     "react-test-renderer": "^16.8.4",
-    "reskript": "^0.25.10"
+    "reskript": "^0.25.12"
   },
   "peerDependencies": {
     "react": ">=16",

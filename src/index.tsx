@@ -21,7 +21,7 @@ export const Link: FC<LinkProps> = ({refresh, external, to, activeClassName, inn
     return <RouterLink to={to} {...props} />;
 };
 
-interface LinkProps<S = {}> extends RouterNavLinkProps<S>{
+export interface LinkProps<S = {}> extends RouterNavLinkProps<S>{
     to: string;
     refresh?: boolean;
     external?: boolean;
@@ -45,7 +45,7 @@ export const ExternalLink: FC<Omit<LinkProps, 'external'>> = props => <Link exte
 
 export const HyperLink: FC<Omit<LinkProps, 'refresh'>> = props => <Link refresh {...props} />;
 
-interface URIArgs {
+export interface URIArgs {
     [key: string]: string | {[key: string]: string};
 }
 
